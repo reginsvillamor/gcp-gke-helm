@@ -1,4 +1,3 @@
-
 resource "helm_release" "ingress_nginx" {
   name             = "ingress-nginx"
   version          = "4.1.1"
