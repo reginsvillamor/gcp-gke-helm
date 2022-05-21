@@ -20,5 +20,5 @@ resource "google_compute_subnetwork" "subnet" {
 }
 
 resource "google_compute_address" "static_ip" {
-  name = "glb-${var.env}-${var.region}-ip"
+  name = "lb-${var.env}-${var.region}-ip"
 }

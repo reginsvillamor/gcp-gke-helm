@@ -5,6 +5,6 @@ module "gke_cluster" {
   project_name = var.project_name
 }
 
-output "proxy_another_client_domain_name" {
-  value = module.gke_cluster.gke_static_ip
+output "lb_ip_for_gke_cluster" {
+  value = module.gke_cluster.reserved_lb_static_ip
 }

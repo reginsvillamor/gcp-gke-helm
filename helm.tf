@@ -9,6 +9,6 @@ resource "helm_release" "ingress_nginx" {
 
   set {
     name  = "controller.service.loadBalancerIP"
-    value = google_compute_address.lb_static_ip.address
+    value = module.gke_cluster.reserved_lb_static_ip
   }
 }
