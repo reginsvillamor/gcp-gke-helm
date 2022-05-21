@@ -1,6 +1,7 @@
 module "gke_cluster" {
   source       = "./modules/gke"
   env          = "staging"
+  project_id = var.project_id
   project_name = var.project_name
 }
 
