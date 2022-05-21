@@ -11,3 +11,12 @@ resource "helm_release" "ingress_nginx" {
     value = module.gke_cluster.reserved_lb_static_ip
   }
 }
+
+resource "helm_release" "external_secrets" {
+  name             = "external-secrets"
+  version          = "0.5.3"
+  namespace        = "es"
+  repository       = "https://charts.external-secrets.io"
+  chart            = "external-secrets"
+  create_namespace = true
+}
