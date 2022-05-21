@@ -25,10 +25,3 @@ provider "google-beta" {
   region  = var.region
   zone    = var.zone
 }
-
-provider "helm" {
-  kubernetes {
-    config_path = "~/.kube/config"
-  }
-}
-
