@@ -5,6 +5,6 @@ module "gke_cluster" {
   project_name = var.project_name
 }
 
-output "lb_ip_for_gke_cluster" {
+output "reserved_lb_static_ip" {
   value = module.gke_cluster.reserved_lb_static_ip
 }
