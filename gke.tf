@@ -1,3 +1,7 @@
+variable "env" {}
+variable "project_name" {}
+variable "project_id" {}
+
 module "gke_cluster" {
   source       = "./modules/gke"
   env          = var.env
